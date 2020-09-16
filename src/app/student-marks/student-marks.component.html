@@ -1,0 +1,31 @@
+<div class="center">
+    <h3>Set Marks</h3>
+    <div [hidden]="submitted" style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <!--<label for="name">Name</label>-->
+          <input type="text" class="form-control" placeholder="Enter roll number " id="roll" required [(ngModel)]="internalReport.roll" name="roll">
+        
+        </div>
+    
+        <div class="form-group">
+          
+          <input type="text" class="form-control" placeholder="Enter Internal number " id="internalNumber" required [(ngModel)]="internalReport.internalNumber" name="internalNumber">
+          <input type="text" class="form-control" placeholder="Enter Physics marks " id="physicsMarks" required [(ngModel)]="internalReport.physicsMarks" name="physicsMarks">
+          <input type="text" class="form-control" placeholder="Enter Chemistry marks " id="chemistryMarks" required [(ngModel)]="internalReport.chemistryMarks" name="chemistryMarks">
+          <input type="text" class="form-control" placeholder="Enter Maths marks " id="mathsMarks" required [(ngModel)]="internalReport.mathsMarks" name="mathsMarks">
+          
+         
+        
+        </div>
+        <br>
+        <button id=button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newInternalReport()">Add</button>
+    </div>
+    
+    

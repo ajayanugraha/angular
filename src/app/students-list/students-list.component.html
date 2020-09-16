@@ -1,0 +1,16 @@
+<div class=center>
+<h1>Students</h1>
+
+<div *ngFor="let student of students | async" style="width: 300px;"><ul><li>
+  <student-details [student]='student'></student-details>
+</li>
+</ul>
+</div>
+
+<br>
+<br>
+
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteStudents()'>Delete All</button>
+</div>
+</div>

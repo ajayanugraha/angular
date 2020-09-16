@@ -1,0 +1,20 @@
+<div class=center>
+    <h3>View Marks</h3>
+    <div style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" placeholder="Enter Roll number" class="form-control" id="roll" required [(ngModel)]="roll" name="roll">
+        </div>
+    
+        <div class="btn-group">
+          <br>
+          <button id=button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+    <ul>
+      <li *ngFor="let internalReport of internalReports">
+        <h4>Internal number : {{internalReport.internalNumber}} , Physics mark : {{internalReport.physicsMarks}} , Chemistry Marks : {{internalReport.chemistryMarks}} , Maths marks : {{internalReport.mathsMarks}}</h4>
+      </li>
+    </ul>
+    </div>

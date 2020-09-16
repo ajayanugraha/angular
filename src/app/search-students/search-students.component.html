@@ -1,0 +1,20 @@
+<div class=center>
+    <h3>Find By Name</h3>
+    <div style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" placeholder="Enter Name" class="form-control" id="age" required [(ngModel)]="stringId" name="age">
+        </div>
+    
+        <div class="btn-group">
+          <br>
+          <button id=button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+    <ul>
+      <li *ngFor="let student of students">
+        <h4>Student id : {{student.id}} , Student Name : {{student.name}} , Parent's Name : {{student.parentName}}</h4>
+      </li>
+    </ul>
+    </div>

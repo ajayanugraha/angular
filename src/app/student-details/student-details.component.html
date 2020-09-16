@@ -1,0 +1,15 @@
+<div class=center *ngIf="student">
+  <div>
+    <label>Roll Number: </label> {{student.roll}}
+  </div>
+    <div>
+      <label>Name: </label> {{student.name}}
+    
+    
+  
+    </div>
+    <button class="button is-small btn-danger" (click)='deleteStudent()'>Delete</button>
+    <button class="button is-small btn-danger" (click)='exportStudent()'>Export</button>
+  
+  
+  </div>
